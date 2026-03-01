@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Counter from "../components/Counter.vue";
+import Astronaut from "../components/Astronaut.vue"
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
@@ -14,13 +14,13 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1><Astronaut client:idle></Astronaut> Hello, Astronaut!</h1>
 			<!-- Astro does not import JS by default, therefore, we need to load the JS on client -->
-			<Counter client:load initialCount={3}>
+			<!-- <Counter client:load initialCount={3}>
 				Hello
 				<div slot="top">Hello</div>
 				<div slot="bottom">World</div>
-			</Counter>
+			</Counter> -->
 			<p>
 				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
 				template. This template serves as a lightweight, minimally-styled starting
